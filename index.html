@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weekmenu | Tafelplan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="index.html" aria-label="Tafelplan startpagina">
+        <span class="wordmark-mark" aria-hidden="true">T</span>
+        <span>tafelplan</span>
+      </a>
+      <span class="topbar-label">THUISKEUKEN <span aria-hidden="true">/</span> WEEKMENU</span>
+    </header>
+
+    <main class="page">
+      <section class="intro" aria-labelledby="pageTitle">
+        <div>
+          <p class="eyebrow">Een week, zeven avonden</p>
+          <h1 id="pageTitle">Wat eten we <em>deze week?</em></h1>
+        </div>
+        <p class="intro-note">Bij een nieuwe week staat een vers voorstel klaar. Pas gerechten per dag aan; je planning blijft bewaard in deze browser.</p>
+      </section>
+
+      <section class="menu-planner" aria-label="Weekmenu samenstellen">
+        <div class="planner-toolbar">
+          <div class="week-navigation" aria-label="Andere week bekijken">
+            <button class="icon-button" id="previousWeek" type="button" aria-label="Vorige week" title="Vorige week">&#8592;</button>
+            <p class="week-label" id="weekLabel" aria-live="polite"></p>
+            <button class="icon-button" id="nextWeek" type="button" aria-label="Volgende week" title="Volgende week">&#8594;</button>
+          </div>
+          <button class="primary-button" id="newMenu" type="button"><span aria-hidden="true">&#8635;</span> Nieuw voorstel</button>
+        </div>
+
+        <p class="status-message" id="statusMessage" aria-live="polite"></p>
+        <div class="menu-list" id="menuList" aria-label="Gerechten per dag"></div>
+      </section>
+
+      <footer class="page-footer">
+        <span>Jouw gerechtenlijst, voor zeven avonden.</span>
+        <span>De planning wordt lokaal in deze browser bewaard.</span>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
